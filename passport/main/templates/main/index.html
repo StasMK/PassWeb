@@ -1,12 +1,24 @@
 {% extends 'main/layout.html' %}
 
-{% block  title %}Главная страница{% endblock %}
+{% block  title %}{{title}}{% endblock %}
 
 {% block  content %}
     <div class="features">
-        <h1>Главная страница</h1>
+        <h1>{{title}}</h1>
         <p>User case</p>
-        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-success">Нажми на кнопку</button>
+<!--        {{values}}-->
+        {% for el in values %}
+            {% if el == 'Мир' %}
+<!--                {% filter upper %}-->
+                    <p>{{ el|upper }}</p>
+<!--                {% endfilter %}-->
+            {% endif %}
+        {% endfor %}
+
+        {% for el in obj %}
+            <p>{{ el }}</p>
+        {% endfor %}
 
     </div>
 {% endblock %}

@@ -1,12 +1,25 @@
 from django.shortcuts import render
+
+
 # from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request,'main/index.html')
+    data = {
+        'title': 'Main page',
+        'values': ['Привет','Мир','!'],
+        'obj': {
+            'car': 'Renault',
+            'age': '45',
+            'hobby': 'IT'
+        }
+    }
+    return render(request, 'main/index.html', data)
+
 
 def about(request):
-    return render(request,'main/about.html')
+    return render(request, 'main/about.html')
+
 
 def loaddata(request):
-    return render(request,'main/ishdata.html')
+    return render(request, 'main/ishdata.html')
