@@ -46,3 +46,8 @@ aside {
      margin-top: 50px;
      margin-left: 30px;
  }
+ .alert-warning {
+     float: left;
+     clear: both;
+     text-align: left;
+ }

@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block  title %}Дороги {% endblock %}
+
+{% block  content %}
+    <div class="features">
+        <h1>Дороги</h1>
+        {% for el in news %}
+            <div class="alert alert-warning">
+                <h5>Автомобильная дорога: {{ el.troad }} {{ el.nroad }}</h5>
+                <p>Начало участка: {{ el.n_km }} км.</p>
+                <p>Конец участка: {{ el.k_km }} км.</p>
+            </div>
+        {% endfor %}
+        {# Комментарий #}
+    </div>
+{% endblock %}
