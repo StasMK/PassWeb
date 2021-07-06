@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block  title %}Добавление дороги{% endblock %}
+
+{% block  content %}
+<div class="features">
+    <h1>Добавление дороги</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.troad }}<br>
+        {{ form.nroad }}<br>
+        {{ form.n_km }}<br>
+        {{ form.k_km }}<br>
+        <span>{{ error }}</span>
+        <button class = "btn btn-success" type="submit">Добавить дорогу</button>
+
+    </form>
+</div>
+{% endblock %}
