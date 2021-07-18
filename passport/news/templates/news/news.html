@@ -10,6 +10,7 @@
                 <h5>Автомобильная дорога: {{ el.troad }} {{ el.nroad }}</h5>
                 <p>Начало участка: {{ el.n_km }} км.</p>
                 <p>Конец участка: {{ el.k_km }} км.</p>
+                <a href="{% url 'news-datail' el.id %}" class="btn btn-warning">Читать детальнее</a>
             </div>
         {% endfor %}
         {# Комментарий #}
